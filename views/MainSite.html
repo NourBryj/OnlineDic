@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Dictionary</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../public/css/siteStyle.css">
+	<script src="../public/css/Menu.js"></script>
+	
+</head>
+<body>
+
+<div class="container-fluid">	
+<ul>
+  <li><a class="active" href="#home" tabindex="1">Online Dictionary</a></li>
+  <li><a href="#news" tabindex="2">About us</a></li>
+  
+</ul>
+<div class="row row-no-gutter" >
+<div class="col-md-6 btn-group">
+	<div class="txtborder">
+	<h3> Choose a Language </h3>
+
+  <button class="button " tabindex="3" action="Russian">Russian</button>
+  <button class="button " tabindex="4">English</button>
+ </div> 
+ </div>
+ <h3> Submit a Word </h3>
+ <form action="search" method="POST" style = "height:100%; float:right;" class = " col-md-6" >
+ <input class="searchbutton"style="height:100%" type="submit" tabindex="6">
+     <input type="text" name="oxford" style=" padding: 29px 32px; width:40%" tabindex="5" id="labnol">
+
+   </form>
+   
+
+</div>
+<div class="row" style="margin-left: auto; margin-right: auto ">
+  <div class="column" style="background-color:#aaa;" >
+    <h2 tabindex="7">Oxford Dictionary</h2>
+    <p tabindex="8">Some text..</p>
+  </div>
+  <div class="column" style="background-color:#bbb;" >
+    <h2 tabindex="9">Cambridge Dictionary</h2>
+    <p tabindex="10">Some text..</p>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2 tabindex="11">Yandex Dictionary</h2>
+    <p tabindex="12">Some text..</p>
+  </div>
+    <div class="column" style="background-color:#ccc;">
+    <h2 tabindex="11">Lexicala Dictionary</h2>
+    <p tabindex="12">Some text..</p>
+  </div>
+</div>
+
+</div>
+   
+   
+</body>
+</html>

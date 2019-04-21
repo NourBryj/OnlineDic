@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Online Dictionary</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/siteStyle1.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="scripts/Menu.js"></script>
+    <script src="scripts/jqScript.js"></script>
+    <script src="scripts/formatScript.js"></script>
+    <style></style>
+</head>
+
+<head> Online dictionary</head>
+
+<body>
+    <div class="jumbotron text-center jombtext">
+        <h1 tabindex="1">Online Dictionary</h1>
+    </div>
+    <div class="container-fluid contStyle">
+        <div class="row">
+            <div class="col-xs-12">
+                <nav class="navbar navstyle">
+                    <ul>
+                        <li><a class="active" href="#home" tabindex="2" aria-label="Main Online dictionay Page">Online Dictionary</a></li>
+                        <li><a href="#news" tabindex="3">About us</a></li>
+                        <li><a href="#" onclick="increaseFontSize('bodincrease',5)">+</a></li>
+                        <li><a href="#" onclick="increaseFontSize('bodincrease',-5)">-</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container contmax" id="bodincrease">
+        <div class="row toprow">
+            <div class="col-md-12">
+                <div class="btn-group btn-group-lg langbtncont"><a class="button btn btnstyle rusbtn" type="button" tabindex="4" href="/Russian">Russian</a><a class="button btn btnstyle" type="button" tabindex="3" href="/English">English</a></div>
+            </div>
+            <div class="col-md-12">
+                <form class="searchform" action="searchEn" method="POST"><input class="btn btn-lg searchbutton" type="submit" tabindex="6" aria-label="Submit Word"><input class="submittext" id="nospace" type="text" name="oxford" placeholder="Enter Word" tabindex="5"></form>
+            </div>
+        </div>
+        <div class="row dicrow">
+            <div class="col-sm-12 col-md-12 col-lg-4 vcolspace" id="Oxbod">
+                <div class="colstyle clearfix">
+                    <h3 class="pull-left" tabindex="7">Oxford Dictionary</h3><button class="btn btn-sm copybtn pull-left" onclick="copyToClipboard('#OxDic')" tabindex="8" aria-label="Copy Oxford Dictionary Text">Copy text</button>
+                    <p class="pull-left" style="diplay:inline-box;"></p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 vcolspace" id="Yanbod">
+                <div class="colstyle clearfix">
+                    <h3 class="pull-left" tabindex="13">Yandex Dictionary</h3><button class="btn btn-sm copybtn pull-left" onclick="copyToClipboard('#YanDic')" tabindex="14" aria-label="Copy Yandex Dictionary Text">Copy text</button>
+                    <p></p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 vcolspace" id="Lexbod">
+                <div class="colstyle clearfix">
+                    <h3 class="pull-left" tabindex="16">Lexicala Dictionary</h3><button class="btn btn-sm copybtn pull-left" onclick="copyToClipboard('#LexDic')" tabindex="17" aria-label="Copy Yandex Dictionary Text">Copy text	</button>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center footer">
+        <p class="copyrights">All Rights Reserved 2019</p>
+    </footer>
+</body>
+
+</html>

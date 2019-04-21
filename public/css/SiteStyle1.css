@@ -1,0 +1,256 @@
+
+body{
+font-family:'Century Gothic';
+}
+
+.navstyle {
+	    background-color: #034a75;
+    border: 0;
+    max-width: 1200px;
+    min-height: 0;
+    margin: 0 auto;
+	padding:0 30px;
+}
+
+
+.navstyle ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #034a75;
+  border-color: #034a75;
+  border:none;
+  max-width:1024px;
+}
+
+.navstyle li {
+  float: left;
+    border:0;
+}
+
+.navstyle  li a {
+	  
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:21px;
+  border-bottom:2px solid transparent;
+  border-right:2px solid white;
+}
+
+.navstyle li a:hover{
+ background-color: #032940;
+  text-decoration:none;
+  border-bottom-color:#027CC5;
+  color:#fff;
+}
+	
+.navstyle li a.active{
+	background-color: #032940;
+  text-decoration:none;
+  border-bottom-color:#032940;
+  text-decoration:underline;
+  color:#fff;
+}
+
+
+/* .navstyle li a.active:hover { */
+	/* border-bottom-color:#e2e1e1; */
+/* } */
+
+.btn {
+	border-radius:0px!important;
+}
+
+.btn-group .btnstyle {
+	
+	color:white; 
+	height:65px;
+	font-size:25px;
+	background-color:#495054; 
+	width:47%;
+	padding-top:20px;
+	-webkit-transition: background-color 0.3s linear;
+		-ms-transition: background-color 0.3s linear;
+		transition: background-color 0.3s linear;
+	
+}
+.btn-group .btnstyle:hover {
+	background-color:#525656; 
+	color:white;
+	text-decoration: underline;
+ 
+	
+}
+
+.rusbtn {
+	margin-right : 6% !important;
+}
+
+.searchbutton{
+	height:100%; width:30%; color: white;
+  padding: 32px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+   position: relative;
+   margin: 0;
+  font-size: 33px;
+  cursor: pointer;
+  float: right;
+  background-color:#034a75;
+  -webkit-transition: background-color 0.3s linear;
+		-ms-transition: background-color 0.3s linear;
+    transition: background-color 0.3s linear;
+    
+}
+.searchbutton:hover{
+	background-color:#032940;
+	color: white;
+		
+}
+
+.submittext {
+	padding: 0px; 
+	width:69%; 
+	height:100%; 
+	float:left; 
+	display: inline-block; 
+	font-size:40px; 
+	border:0; 
+	border-bottom: 2px solid #457B9D; 
+}
+
+
+.navbar-brand:hover {
+	color: grey;
+}
+
+.copybtn{
+		background-color:#027CC5;
+		color:white;
+		-webkit-transition: background-color 0.3s linear;
+		-ms-transition: background-color 0.3s linear;
+		transition: background-color 0.3s linear;
+		margin-top:20px;
+    margin-left:15px;
+    margin-bottom:20px;
+		
+}
+
+.copybtn:hover{
+	background-color:#075b8e;
+	color: white;;
+}
+
+.sizebtn {
+  width:50%;
+}
+
+
+.jombtext {
+	margin-bottom:10px; background-color:white; color:#027CC5;
+}
+
+
+.dicrow{
+  padding:0px;
+  display: flex;
+  
+}
+.searchform{
+	height:97px; width:100%; float:right;
+}
+
+.contmax{
+	max-width:1200px;
+}
+
+.langbtncont{
+	width: 100%; margin-bottom:50px; 
+}
+
+.toprow{
+	margin-top:50px; margin-bottom:50px;
+}
+.contStyle {
+	background-color:#034a75;
+	border:0;
+	margin-bottom:0;
+}
+
+.colstyle {
+  background-color: #EFEFEF;
+    padding-top: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+   height: 100%;
+   border-left: 2px solid #034a75;
+  border-right: 2px solid #034a75;
+
+}
+
+.footer{
+	    background-color: #efefef;
+    color: #027CC5;
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding: 5px;
+}
+
+.copyrights{
+	margin:0;
+}
+
+/*changig the placegolder color*/
+.submittext::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: #cecdcd
+    }
+
+    .submittext:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: #cecdcd;
+       opacity: 1;
+    }
+
+    .submittext::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: #cecdcd;
+        opacity: 1;
+    }
+
+    .submittext:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #cecdcd;
+    }
+
+.vcolspace{
+ 
+  
+}
+
+
+@media only screen and (max-width: 1200px){
+	.vcolspace{
+		margin-top:15px;
+		margin-bottom:15px;
+	}
+	
+}
+@media only screen and (max-width: 768px){
+	.vcolspace{
+   
+    width: 100%;
+  }
+
+  .dicrow{
+    display: block;
+  }
+	
+}
+/* @media only screen and (min-width */

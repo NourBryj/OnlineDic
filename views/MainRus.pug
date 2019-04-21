@@ -1,0 +1,57 @@
+doctype html
+html(lang='en')
+	head
+		title Online Dictionary
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+		link(rel='stylesheet', href='css/bootstrap.min.css')
+		link(rel='stylesheet', href='css/siteStyle1.css')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
+		script(src='scripts/Menu.js')
+		script(src='scripts/jqScript.js')
+		script(src='scripts/formatScript.js')
+		style.
+	head
+	body
+		.jumbotron.text-center.jombtext
+			h1 Online Dictionary
+		.container-fluid.contStyle
+			.row
+				.col-xs-12
+					nav.navbar.navstyle
+						ul
+							li
+								a.active(href='#home') Онлайн словарь
+							li
+								a(href='#news') О нас
+							li
+								a(href='#', onclick="increaseFontSize('bodincrease',5)") +
+							li
+								a(href='#', onclick="increaseFontSize('bodincrease',-5)") -
+		.container.contmax
+			.row.toprow
+				.col-md-12
+					.btn-group.btn-group-lg.langbtncont
+						a.button.btn.btnstyle.rusbtn(type='button', tabindex='4'  href='/Russian') русский
+						a.button.btn.btnstyle(type='button', tabindex='3' href='/English') английский
+				.col-md-12
+					form.searchform(action='searchRus', method='POST')
+						input.btn.btn-lg.searchbutton(type='submit', tabindex='6') 
+						input#nospace.submittext(type='text', name='oxford', placeholder='Enter Word', tabindex='5')
+			.row.dicrow
+				.col-sm-12.col-md-12.col-lg-6.vcolspace
+					.colstyle.clearfix
+						h3.pull-left(tabindex='13') Яндекс словарь
+						button.btn.btn-sm.copybtn.pull-left(onclick="copyToClipboard('#YanDic')", tabindex='14') Скопировать текст
+						h3#YanDic(tabindex='0') !{yantitle}
+						p !{yanposition}
+						p !{yanspeech}
+						p !{yantrans}
+				.col-sm-12.col-md-12.col-lg-6.vcolspace
+					.colstyle.clearfix
+						h3.pull-left(tabindex='16') Словарь Lexicala
+						button.btn.btn-sm.copybtn.pull-left(onclick="copyToClipboard('#LexDic')", tabindex='17') Скопировать текст
+						p#LexDic(tabindex='0') #{idword1}
+		footer.text-center.footer
+			p.copyrights All Rights Reserved 2019

@@ -1,0 +1,60 @@
+doctype html
+html(lang='en')
+	head
+		title Online Dictionary
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+		link(rel='stylesheet', href='css/bootstrap.min.css')
+		link(rel='stylesheet', href='css/siteStyle1.css')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
+		script(src='scripts/Menu.js')
+		script(src='scripts/jqScript.js')
+		script(src='scripts/formatScript.js')
+		style.
+	head
+	body
+		.jumbotron.text-center.jombtext
+			h1(tabindex='1') Online Dictionary
+		.container-fluid.contStyle
+			.row
+				.col-xs-12
+					nav.navbar.navstyle
+						ul
+							li
+								a.active(href='#home' tabindex='2' aria-label="Main Online dictionay Page") Online Dictionary
+							li
+								a(href='#news' tabindex='3') About us
+							li
+								a(href='#', onclick="increaseFontSize('bodincrease',5)") +
+							li
+								a(href='#', onclick="increaseFontSize('bodincrease',-5)") -
+							
+		#bodincrease.container.contmax
+			.row.toprow
+				.col-md-12
+					.btn-group.btn-group-lg.langbtncont
+						a.button.btn.btnstyle.rusbtn(type='button', tabindex='4'  href='/Russian') Russian
+						a.button.btn.btnstyle(type='button', tabindex='3' href='/English') English
+				.col-md-12
+					form.searchform(action='searchEn', method='POST')
+						input.btn.btn-lg.searchbutton(type='submit', tabindex='6' aria-label="Submit Word")
+						input#nospace.submittext(type='text', name='oxford', placeholder='Enter Word', tabindex='5')
+			.row.dicrow
+				#Oxbod.col-sm-12.col-md-12.col-lg-4.vcolspace
+					.colstyle.clearfix
+						h3.pull-left(tabindex='7') Oxford Dictionary
+						button.btn.btn-sm.copybtn.pull-left(onclick="copyToClipboard('#OxDic')", tabindex='8' aria-label="Copy Oxford Dictionary Text") Copy text
+						p.pull-left(style="diplay:inline-box") !{idword}
+				#Yanbod.col-sm-12.col-md-12.col-lg-4.vcolspace
+					.colstyle.clearfix
+						h3.pull-left(tabindex='13') Yandex Dictionary
+						button.btn.btn-sm.copybtn.pull-left(onclick="copyToClipboard('#YanDic')", tabindex='14' aria-label="Copy Yandex Dictionary Text") Copy text
+						p !{yantrans}
+				#Lexbod.col-sm-12.col-md-12.col-lg-4.vcolspace
+					.colstyle.clearfix
+						h3.pull-left(tabindex='16') Lexicala Dictionary
+						button.btn.btn-sm.copybtn.pull-left(onclick="copyToClipboard('#LexDic')", tabindex='17' aria-label="Copy Yandex Dictionary Text") Copy text	
+						p !{idword1}
+		footer.text-center.footer
+			p.copyrights All Rights Reserved 2019

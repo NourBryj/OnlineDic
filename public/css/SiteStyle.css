@@ -1,0 +1,111 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+
+.btn-group .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 30px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+
+  width:45%;
+}
+
+.btn-group .button:hover{
+  background-color: #3e8e41;
+   margin: 0;
+    position: relative;
+}
+
+.searchbutton {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 30px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+   position: relative;
+   margin: 0;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+  width:50%;
+}
+
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  box-sizing:border-box;
+  height: 100%; /* Should be removed. Only for demonstration */
+}
+.column:hover {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 100%;
+ border: 5px solid #333333;  /* Should be removed. Only for demonstration */
+}
+}
+.column:focus-within {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 100%;
+ border: 5px solid #333333;  /* Should be removed. Only for demonstration */
+}
+
+/* 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ */
+  

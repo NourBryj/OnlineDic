@@ -1,0 +1,91 @@
+<html lang="en"><head>
+  <title>Online Dictionary</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="../public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../public/css/siteStyle1dark.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ <script src="../public/scripts/Menu.js"></script>
+<script src="../public/scripts/jqScript.js"></script>  
+
+</head>
+<body>
+
+<div class="jumbotron text-center jombtext" >
+  <h1>Online Dictionary</h1> 
+</div>
+
+
+  <div class="container-fluid contStyle " >
+	<div class="row">
+			<div class="col-xs-12">
+			  <nav class="navbar navstyle">
+ 
+					<ul>				
+							<li><a class="active" href="#home">Online Dictionary</a></li>
+							<li><a href="#news">About us</a></li>
+
+					</ul>
+
+				</nav>
+			</div>
+	</div>
+</div>
+
+  
+
+
+<div class="container contmax " >
+ <div class="row toprow" >
+  <div class="col-md-12">
+   <div class="btn-group btn-group-lg langbtncont">
+   <a>
+      <button type="button" class="btn  btnstyle rusbtn " tabindex="4" ref="/Russian">Russian</button>
+	  </a>
+	  <a>
+    <button type="button" class="btn  btnstyle " tabindex="3"  href="/English">English</button>
+	</a>
+  </div>
+ 
+ </div>
+<div class="col-md-12">
+ <form action="search" method="POST" class="searchform">
+ <input type="submit" class="btn btn-lg searchbutton" tabindex="6">
+     <input type="text" name="oxford" class="submittext "placeholder="Enter Word" tabindex="5" id="nospace">
+ </form>
+</div>
+ </div>
+  <div class="row dicrow" >
+    <div class="col-sm-12 col-md-12 col-lg-4 vcolspace" >
+	<div class="colstyle clearfix">
+      <h3 tabindex="7" class="pull-left">Oxford Dictionary</h3>
+      <button onclick="copyToClipboard('#OxDic')" class=" btn  btn-sm copybtn pull-left" tabindex="8">Copy text</button>
+	  </div>
+    </div>
+		
+
+	 <div class="col-sm-12 col-md-12 col-lg-4 vcolspace" >
+	 <div class="colstyle clearfix">
+      <h3 tabindex="13" class="pull-left">Yandex Dictionary</h3>
+	  <button onclick="copyToClipboard('#YanDic')" class=" btn  btn-sm copybtn pull-left" tabindex="14">Copy text</button>
+       
+	   </div>
+    </div>
+	
+	 <div class="col-sm-12 col-md-12 col-lg-4 vcolspace">
+	 <div class="colstyle clearfix">
+      <h3 tabindex="16" class="pull-left">Lexicala Dictionary</h3>
+	  <button onclick="copyToClipboard('#LexDic')" class=" btn  btn-sm copybtn pull-left" tabindex="17">Copy text</button>
+       </div>
+    </div>
+	
+  </div>
+</div>
+
+<footer class="text-center footer">
+  <p class="copyrights">All Rights Reserved 2019</p>
+</div>
+
+</body></html>
