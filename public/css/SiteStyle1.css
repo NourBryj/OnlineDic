@@ -44,14 +44,21 @@ font-family:'Century Gothic';
 .navstyle li a:hover{
  background-color: #032940;
   text-decoration:none;
-  border-bottom-color:#027CC5;
+  border-bottom-color:#fb6004;
   color:#fff;
+ 
 }
+.navstyle li a:focus{
+  background-color: #032940;
+   text-decoration:none;
+   border-bottom-color:#fb6004;
+   color:#fff;
+  
+ }
 	
 .navstyle li a.active{
 	background-color: #032940;
-  text-decoration:none;
-  border-bottom-color:#032940;
+  border-bottom-color:#fb6004;
   text-decoration:underline;
   color:#fff;
 }
@@ -79,7 +86,14 @@ font-family:'Century Gothic';
 	
 }
 .btn-group .btnstyle:hover {
-	background-color:#525656; 
+	background-color:#232729; 
+	color:white;
+	text-decoration: underline;
+ 
+	
+}
+.btn-group .btnstyle:focus {
+	background-color:#232729; 
 	color:white;
 	text-decoration: underline;
  
@@ -101,15 +115,22 @@ font-family:'Century Gothic';
   font-size: 33px;
   cursor: pointer;
   float: right;
-  background-color:#034a75;
+  background-color:#fb6004;
   -webkit-transition: background-color 0.3s linear;
 		-ms-transition: background-color 0.3s linear;
     transition: background-color 0.3s linear;
     
 }
 .searchbutton:hover{
-	background-color:#032940;
-	color: white;
+	background-color:#a63f03;
+  color: white;
+  text-decoration: underline;
+		
+}
+.searchbutton:focus{
+	background-color:#a63f03;
+  color: white;
+  text-decoration: underline;
 		
 }
 
@@ -123,28 +144,66 @@ font-family:'Century Gothic';
 	border:0; 
 	border-bottom: 2px solid #457B9D; 
 }
-
-
-.navbar-brand:hover {
-	color: grey;
+.submittext:focus{
+border-color: #fb6004;
 }
 
+
 .copybtn{
-		background-color:#027CC5;
-		color:white;
+		background-color: transparent;
+		
 		-webkit-transition: background-color 0.3s linear;
 		-ms-transition: background-color 0.3s linear;
 		transition: background-color 0.3s linear;
 		margin-top:20px;
-    margin-left:15px;
+
     margin-bottom:20px;
+    color:#034a75;
 		
 }
 
 .copybtn:hover{
-	background-color:#075b8e;
-	color: white;;
+	color:#032940;
 }
+.copybtn:focus{
+	color:#032940;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
 
 .sizebtn {
   width:50%;
@@ -152,7 +211,7 @@ font-family:'Century Gothic';
 
 
 .jombtext {
-	margin-bottom:10px; background-color:white; color:#027CC5;
+  margin-bottom:10px; background-color:white; color:#fb6004;
 }
 
 
@@ -189,14 +248,40 @@ font-family:'Century Gothic';
     padding-right: 10px;
     padding-bottom: 10px;
    height: 100%;
-   border-left: 2px solid #034a75;
+   border: 2px solid #034a75;
+}
+
+.defbox {
+  border-bottom: 2px solid #034a75;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  margin-top:5px;
+  padding-bottom: 5px;
+
+}
+.defbox:focus {
+  border-bottom: 2px solid #034a75;
+  border-top: 2px solid #034a75;
   border-right: 2px solid #034a75;
+  border-left: 2px solid #034a75;
+  margin-top:5px;
+  padding-bottom: 5px;
+
+}
+.defbox:hover {
+  border-bottom: 2px solid #034a75;
+  border-top: 2px solid #034a75;
+  border-right: 2px solid #034a75;
+  border-left: 2px solid #034a75;
+  margin-top:5px;
+  padding-bottom: 5px;
 
 }
 
 .footer{
 	    background-color: #efefef;
-    color: #027CC5;
+    color: #032940;
     margin-top: 30px;
     margin-bottom: 0;
     padding: 5px;
@@ -234,6 +319,10 @@ font-family:'Century Gothic';
   
 }
 
+.titlespace {
+  display:inline-block;
+}
+
 
 @media only screen and (max-width: 1200px){
 	.vcolspace{
@@ -242,7 +331,7 @@ font-family:'Century Gothic';
 	}
 	
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1200px){
 	.vcolspace{
    
     width: 100%;
@@ -252,5 +341,21 @@ font-family:'Century Gothic';
     display: block;
   }
 	
+}
+
+@media only screen and (max-width: 768px){
+  .searchbutton{
+    width:100%;
+    margin-bottom:20px;
+  }
+
+  .submittext{
+    width:100%;
+    margin-bottom:10px;
+
+  }
+  .colstyle{
+    margin-top:70px;
+  }
 }
 /* @media only screen and (min-width */

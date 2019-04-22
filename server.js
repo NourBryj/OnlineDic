@@ -166,12 +166,14 @@ app.post('/searchEn', function (searchReq, searchRes) {
                 for (var i = 1; i < y.length; i++) {
                     var wordid = "yanwordid" + i;
                   //  var hashword = "('#yanwordid" + i + "')";
-                    var thefirst = yanstring + "<p tabindex='0' id=" + wordid + ">";
+                    var thefirst = yanstring + "<p class='defbox' tabindex='0' id=" + wordid + ">";
                     var themid = "<b><em> Definition " + i + ": </em></b>" + y[i];
-                    var btnfirst = "</p><button class='btn btn-sm copybtn'";
+                    var btnfirst = "<button class='btn btn-sm copybtn'";
                     var clipinfo = "onclick='copyToClipboard(&quot #yanwordid"+i+" &quot)'";
-                    var clickbtn =  clipinfo +"  tabindex='0'> Copy Previous Text </button> ";
-                    yanstring =  thefirst + themid + btnfirst + clickbtn;
+                    var clickbtn =  clipinfo +"  tabindex='0'><img  src='images&sol;copy.png'> </button> </p>";
+                    yanstring =  yanstring + "<p class='defbox' tabindex='0' id=" + wordid + "><b><em> Definition " + i + ": </em></b>"  +
+                     "<button aria-label='copy text' class='btn btn-sm copybtn fas fa-copy' onclick='copyToClipboard(&quot #yanwordid"+i
+                     +" &quot)' tabindex='0'  style='font-size: 20px;'></button>" + y[i] + "</p>" ;
                     
 
                 }
@@ -219,7 +221,8 @@ app.post('/searchEn', function (searchReq, searchRes) {
                 for (i = 1; i < a.length; i++) {
                     var wordid = "'wordid" + i + "'";
                     var hashword = "#" + wordid;
-                    oxstring = oxstring + "<p tabindex='0' id=" + wordid + i + " style='margin-top:5px;' ><b><em> Definition " + i + ": </em></b>" + a[i] + "</p> <button class='btn btn-sm copybtn' onclick='copyToClipboard(&quot #wordid"+i+" &quot)' tabindex='0'> Copy Previous Text </button>";
+                    oxstring = oxstring + "<p class='defbox' tabindex='0'  id=" + wordid + i + "  ><b><em> Definition " + i + ": </em></b> <button aria-label='copy text' class='btn btn-sm copybtn fas fa-copy' onclick='copyToClipboard(&quot #wordid"+i+" &quot)' tabindex='0' style='font-size: 20px;' ></button> <br>" + a[i] + 
+                    " </p> ";
                     oxstring = oxstring.replace(/undefined/, "");
                 }
                 var lexres = JSON.stringify(resu.two);
@@ -234,7 +237,8 @@ app.post('/searchEn', function (searchReq, searchRes) {
 					/* lexres = lexres.replace(/"id"*."definition"/g, 'Definition: '); 
 					lexres = lexres.replace(/["']/g, " "); */
                     for (var i = 0; i < lexj.length; i++) {
-                        lexres = lexres + "<p tabindex='0' id='lexwordid" + i + "'><br><b> Definition " + i + 1 + ": </b>" + JSON.stringify(lexj[i].definition) + "</p> <button class='btn btn-sm copybtn' onclick='copyToClipboard(&quot #lexwordid"+i+" &quot)' tabindex='0'> Copy Previous Text </button>";
+                        lexres = lexres + "<p class='defbox' tabindex='0' id='lexwordid" + i + "'><em><b> Definition " + (i+1) + ": </b> </em> <button class='btn btn-sm copybtn fas fa-copy' onclick='copyToClipboard(&quot #lexwordid"+i+" &quot)' tabindex='0' aria-label='copy text'  style='font-size: 20px;'></button> <br>" + JSON.stringify(lexj[i].definition) + 
+                        "  </p> ";
 
                     }
 
@@ -252,6 +256,7 @@ app.post('/searchEn', function (searchReq, searchRes) {
                 yanposition: yanpos,
                 yanspeech: yants,
                 yantrans: yanstring,
+                submitword: searchInputVal,
                 idword1: lexres,
                 idword: oxstring /* oxdefinition: oxdef, oxety: oxet, oxexample: oxex */
             });
@@ -386,7 +391,8 @@ app.post('/searchRus', function (searchReq, searchRes) {
                 /* lexres = lexres.replace(/"id"*."definition"/g, 'Definition: '); 
                 lexres = lexres.replace(/["']/g, " "); */
                 for (var i = 0; i < lexj.length; i++) {
-                    lexres = lexres + "<p tabindex='0' id='lexwordid" + i + "'><br><b> Definition " + i + 1 + ": </b>" + JSON.stringify(lexj[i].definition) + "</p> <button class='btn btn-sm copybtn' onclick='copyToClipboard(&quot #lexwordid"+i+" &quot)' tabindex='0'> Copy Previous Text </button>";
+                    lexres = lexres + "<p class='defbox' tabindex='0' id='lexwordid" + i + "'><br><b> Definition " + i + 1 + ": </b>" + JSON.stringify(lexj[i].definition) +
+                     " <button class='btn btn-sm copybtn' onclick='copyToClipboard(&quot #lexwordid"+i+" &quot)' tabindex='0'> Copy Previous Text </button> </p > ";
 
                 }
 
