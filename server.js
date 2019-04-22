@@ -173,7 +173,7 @@ app.post('/searchEn', function (searchReq, searchRes) {
                     var clickbtn =  clipinfo +"  tabindex='0'><img  src='images&sol;copy.png'> </button> </p>";
                     yanstring =  yanstring + "<p class='defbox' tabindex='0' id=" + wordid + "><b><em> Definition " + i + ": </em></b>"  +
                      "<button aria-label='copy text' class='btn btn-sm copybtn fas fa-copy' onclick='copyToClipboard(&quot #yanwordid"+i
-                     +" &quot)' tabindex='0'  style='font-size: 20px;'></button>" + y[i] + "</p>" ;
+                     +" &quot)' tabindex='0'  style='font-size: 15px;'></button>" + y[i] + "</p>" ;
                     
 
                 }
@@ -221,7 +221,7 @@ app.post('/searchEn', function (searchReq, searchRes) {
                 for (i = 1; i < a.length; i++) {
                     var wordid = "'wordid" + i + "'";
                     var hashword = "#" + wordid;
-                    oxstring = oxstring + "<p class='defbox' tabindex='0'  id=" + wordid + i + "  ><b><em> Definition " + i + ": </em></b> <button aria-label='copy text' class='btn btn-sm copybtn fas fa-copy' onclick='copyToClipboard(&quot #wordid"+i+" &quot)' tabindex='0' style='font-size: 20px;' ></button> <br>" + a[i] + 
+                    oxstring = oxstring + "<p class='defbox' tabindex='0'  id=" + wordid + i + "  ><b><em> Definition " + i + ": </em></b> <button aria-label='copy text' class='btn btn-sm copybtn fas fa-copy' onclick='copyToClipboard(&quot #wordid"+i+" &quot)' tabindex='0' style='font-size: 15px;' ></button> <br>" + a[i] + 
                     " </p> ";
                     oxstring = oxstring.replace(/undefined/, "");
                 }
