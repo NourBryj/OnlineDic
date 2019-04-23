@@ -4,7 +4,7 @@ font-family:'Century Gothic';
 }
 
 .navstyle {
-	    background-color: #034a75;
+	    background-color: #076177;
     border: 0;
     max-width: 1200px;
     min-height: 0;
@@ -18,8 +18,8 @@ font-family:'Century Gothic';
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #034a75;
-  border-color: #034a75;
+  background-color: #076177;
+  border-color: #076177;
   border:none;
   max-width:1024px;
 }
@@ -42,23 +42,23 @@ font-family:'Century Gothic';
 }
 
 .navstyle li a:hover{
- background-color: #032940;
+ background-color: #083a47;
   text-decoration:none;
-  border-bottom-color:#fb6004;
+  border-bottom-color:#bb615e;
   color:#fff;
  
 }
 .navstyle li a:focus{
-  background-color: #032940;
+  background-color: #083a47;
    text-decoration:none;
-   border-bottom-color:#fb6004;
+   border-bottom-color:#bb615e;
    color:#fff;
   
  }
 	
 .navstyle li a.active{
-	background-color: #032940;
-  border-bottom-color:#fb6004;
+	background-color: #083a47;
+  border-bottom-color:#bb615e;
   text-decoration:underline;
   color:#fff;
 }
@@ -86,14 +86,14 @@ font-family:'Century Gothic';
 	
 }
 .btn-group .btnstyle:hover {
-	background-color:#232729; 
+	background-color:#66110d; 
 	color:white;
 	text-decoration: underline;
  
 	
 }
 .btn-group .btnstyle:focus {
-	background-color:#232729; 
+	background-color:#66110d; 
 	color:white;
 	text-decoration: underline;
  
@@ -115,20 +115,20 @@ font-family:'Century Gothic';
   font-size: 33px;
   cursor: pointer;
   float: right;
-  background-color:#fb6004;
+  background-color:#a3221b;
   -webkit-transition: background-color 0.3s linear;
 		-ms-transition: background-color 0.3s linear;
     transition: background-color 0.3s linear;
     
 }
 .searchbutton:hover{
-	background-color:#a63f03;
+	background-color:#66110d;
   color: white;
   text-decoration: underline;
 		
 }
 .searchbutton:focus{
-	background-color:#a63f03;
+	background-color:#66110d;
   color: white;
   text-decoration: underline;
 		
@@ -145,7 +145,7 @@ font-family:'Century Gothic';
 	border-bottom: 2px solid #457B9D; 
 }
 .submittext:focus{
-border-color: #fb6004;
+border-color: #66110d;
 }
 
 
@@ -157,16 +157,14 @@ border-color: #fb6004;
 		transition: background-color 0.3s linear;
 		margin-top:20px;
 
-    margin-bottom:20px;
-    color:#034a75;
-		
+    margin-bottom:20px;		
 }
 
 .copybtn:hover{
-	color:#032940;
+	color:#66110d;
 }
 .copybtn:focus{
-	color:#032940;
+	color:#66110d;
 }
 
 .tooltip {
@@ -211,7 +209,8 @@ border-color: #fb6004;
 
 
 .jombtext {
-  margin-bottom:10px; background-color:white; color:#fb6004;
+  margin-bottom:10px; background-color:white; color:#66110d;
+ 
 }
 
 
@@ -242,38 +241,29 @@ border-color: #fb6004;
 }
 
 .colstyle {
-  background-color: #EFEFEF;
+  background-color: #f7f7f7;
     padding-top: 6px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
    height: 100%;
-   border: 2px solid #034a75;
+   border: 2px solid #076177;
 }
 
 .defbox {
-  border-bottom: 2px solid #034a75;
-  border-top: 2px solid transparent;
-  border-right: 2px solid transparent;
-  border-left: 2px solid transparent;
+  border-bottom: 1px solid #034a75;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
   margin-top:5px;
   padding-bottom: 5px;
 
 }
-.defbox:focus {
-  border-bottom: 2px solid #034a75;
-  border-top: 2px solid #034a75;
-  border-right: 2px solid #034a75;
-  border-left: 2px solid #034a75;
-  margin-top:5px;
-  padding-bottom: 5px;
-
-}
-.defbox:hover {
-  border-bottom: 2px solid #034a75;
-  border-top: 2px solid #034a75;
-  border-right: 2px solid #034a75;
-  border-left: 2px solid #034a75;
+.defbox:focus, .defbox:hover {
+  border-bottom: 1px solid #034a75;
+  border-top: 1px solid #034a75;
+  border-right: 1px solid #034a75;
+  border-left: 1px solid #034a75;
   margin-top:5px;
   padding-bottom: 5px;
 

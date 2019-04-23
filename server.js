@@ -237,7 +237,7 @@ app.post('/searchEn', function (searchReq, searchRes) {
 					/* lexres = lexres.replace(/"id"*."definition"/g, 'Definition: '); 
 					lexres = lexres.replace(/["']/g, " "); */
                     for (var i = 0; i < lexj.length; i++) {
-                        lexres = lexres + "<p class='defbox' tabindex='0' id='lexwordid" + i + "'><em><b> Definition " + (i+1) + ": </b> </em> <button class='btn btn-sm copybtn fas fa-copy' onclick='copyToClipboard(&quot #lexwordid"+i+" &quot)' tabindex='0' aria-label='copy text'  style='font-size: 20px;'></button> <br>" + JSON.stringify(lexj[i].definition) + 
+                        lexres = lexres + "<p class='defbox' tabindex='0' id='lexwordid" + i + "'><em><b> Definition " + (i+1) + ": </b> </em> <button class='btn btn-sm copybtn fas fa-copy' onclick='copyToClipboard(&quot #lexwordid"+i+" &quot)' tabindex='0' aria-label='copy text'  style='font-size: 15px;'></button> <br>" + JSON.stringify(lexj[i].definition) + 
                         "  </p> ";
 
                     }
