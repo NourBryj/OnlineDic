@@ -16,3 +16,9 @@ function increaseFontSize(id, increaseFactor){
      txt.style.fontSize = (currentSize + increaseFactor) + 'px';
 }
 
+function getfocus(){
+focustext= document.getElementById('dic');
+focustext.focus();
+
+
+}

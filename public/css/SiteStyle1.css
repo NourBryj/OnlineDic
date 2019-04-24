@@ -103,6 +103,11 @@ font-family:'Century Gothic';
 .rusbtn {
 	margin-right : 6% !important;
 }
+.enbtn {
+  background-color:#66110d; 
+	color:white;
+	text-decoration: underline;
+}
 
 .searchbutton{
 	height:100%; width:30%; color: white;
@@ -251,22 +256,32 @@ border-color: #66110d;
 }
 
 .defbox {
-  border-bottom: 1px solid #034a75;
+  border-bottom: 1px solid #083a47;
   border-top: 1px solid transparent;
   border-right: 1px solid transparent;
   border-left: 1px solid transparent;
   margin-top:5px;
+  padding:2px;
   padding-bottom: 5px;
 
 }
 .defbox:focus, .defbox:hover {
-  border-bottom: 1px solid #034a75;
-  border-top: 1px solid #034a75;
-  border-right: 1px solid #034a75;
-  border-left: 1px solid #034a75;
+  border-bottom: 1px solid #083a47;
+  border-top: 1px solid #083a47;
+  border-right: 1px solid #083a47;
+  border-left: 1px solid #083a47;
   margin-top:5px;
+ 
   padding-bottom: 5px;
 
+}
+
+.defbox:last-child {
+  border-bottom: 1px solid transparent;
+}
+
+.defbox:last-child:hover {
+  border-bottom: 1px solid #083a47;
 }
 
 .footer{

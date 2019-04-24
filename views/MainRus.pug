@@ -18,26 +18,22 @@ html(lang='en')
 			h1 Online Dictionary
 		.container-fluid.contStyle
 			.row
-				.col-xs-12
+				.col-xs-12(style='background-color:#076177;')
 					nav.navbar.navstyle
 						ul
 							li
 								a.active(href='#home') Онлайн словарь
 							li
 								a(href='#news') О нас
-							li
-								a(href='#', onclick="increaseFontSize('bodincrease',5)") +
-							li
-								a(href='#', onclick="increaseFontSize('bodincrease',-5)") -
 		.container.contmax
 			.row.toprow
 				.col-md-12
 					.btn-group.btn-group-lg.langbtncont
-						a.button.btn.btnstyle.rusbtn(type='button', tabindex='4'  href='/Russian') русский
+						a.button.btn.btnstyle.rusbtn(type='button', tabindex='4'  href='/Russian' style='background-color:#66110d; color:white; text-decoration: underline;') русский
 						a.button.btn.btnstyle(type='button', tabindex='3' href='/English') английский
 				.col-md-12
 					form.searchform(action='searchRus', method='POST')
-						input.btn.btn-lg.searchbutton(type='submit', tabindex='6') 
+						input.btn.btn-lg.searchbutton(type='search', tabindex='6') 
 						input#nospace.submittext(type='text', name='oxford', placeholder='Enter Word', tabindex='5')
 			.row.dicrow
 				.col-sm-12.col-md-12.col-lg-6.vcolspace

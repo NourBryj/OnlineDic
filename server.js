@@ -173,7 +173,7 @@ app.post('/searchEn', function (searchReq, searchRes) {
                     var clickbtn =  clipinfo +"  tabindex='0'><img  src='images&sol;copy.png'> </button> </p>";
                     yanstring =  yanstring + "<p class='defbox' tabindex='0' id=" + wordid + "><b><em> Definition " + i + ": </em></b>"  +
                      "<button aria-label='copy text' class='btn btn-sm copybtn fas fa-copy' onclick='copyToClipboard(&quot #yanwordid"+i
-                     +" &quot)' tabindex='0'  style='font-size: 15px;'></button>" + y[i] + "</p>" ;
+                     +" &quot)' tabindex='0'  style='font-size: 15px;'></button> " + y[i] + "</p>" ;
                     
 
                 }
@@ -221,7 +221,7 @@ app.post('/searchEn', function (searchReq, searchRes) {
                 for (i = 1; i < a.length; i++) {
                     var wordid = "'wordid" + i + "'";
                     var hashword = "#" + wordid;
-                    oxstring = oxstring + "<p class='defbox' tabindex='0'  id=" + wordid + i + "  ><b><em> Definition " + i + ": </em></b> <button aria-label='copy text' class='btn btn-sm copybtn fas fa-copy' onclick='copyToClipboard(&quot #wordid"+i+" &quot)' tabindex='0' style='font-size: 15px;' ></button> <br>" + a[i] + 
+                    oxstring = oxstring + "<p class='defbox' tabindex='0'  id=" + wordid + i + "  ><b><em> Definition " + i + ": </em></b> <button aria-label='copy text' class='btn btn-sm copybtn fas fa-copy' onclick='copyToClipboard(&quot #wordid"+i+" &quot)' tabindex='0' style='font-size: 15px;' ></button>  <br>" + a[i] + 
                     " </p> ";
                     oxstring = oxstring.replace(/undefined/, "");
                 }
@@ -237,8 +237,9 @@ app.post('/searchEn', function (searchReq, searchRes) {
 					/* lexres = lexres.replace(/"id"*."definition"/g, 'Definition: '); 
 					lexres = lexres.replace(/["']/g, " "); */
                     for (var i = 0; i < lexj.length; i++) {
-                        lexres = lexres + "<p class='defbox' tabindex='0' id='lexwordid" + i + "'><em><b> Definition " + (i+1) + ": </b> </em> <button class='btn btn-sm copybtn fas fa-copy' onclick='copyToClipboard(&quot #lexwordid"+i+" &quot)' tabindex='0' aria-label='copy text'  style='font-size: 15px;'></button> <br>" + JSON.stringify(lexj[i].definition) + 
-                        "  </p> ";
+                        lexres = lexres + "<p autofocus class='defbox' tabindex='0' id='lexwordid" + i + "'><em><b> Definition " + (i+1) + ": </b> </em> <button class='btn btn-sm copybtn fas fa-copy' onclick='copyToClipboard(&quot #lexwordid"+
+                        i+" &quot)' tabindex='0' aria-label='copy text'  style='font-size: 15px;'></button>  <br>" +
+                         JSON.stringify(lexj[i].definition) +  "  </p> ";
 
                     }
 
