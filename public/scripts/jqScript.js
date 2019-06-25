@@ -1,3 +1,6 @@
+
+
+
 // We need this function if text is pasted arbitrarily.
   $(document).ready(function(e) {   
 $.fn.getCursorPosition = function() {
@@ -15,7 +18,9 @@ $.fn.getCursorPosition = function() {
         return sel.text.length - selLen;
     }
 };
-
+$("input[type=text]").focus(function() {
+  $(this).select();
+});
 // This function will allow us to return to the proper cursor position after a paste.
 $.fn.setCursorPosition = function(pos) {
   return this.each(function(index, elem) {
@@ -44,66 +49,13 @@ $('#nospace').bind('paste', function(event){
 $('#nospace').bind('keydown', function(event){
     return event.which !== 32;
 });
-
- });
- ;(function($){
-  
-  /**
-   * Store scroll position for and set it after reload
-   *
-   * @return {boolean} [loacalStorage is available]
-   */
-  $.fn.scrollPosReaload = function(){
-      if (localStorage) {
-          var posReader = localStorage["posStorage"];
-          if (posReader) {
-              $(window).scrollTop(posReader);
-              localStorage.removeItem("posStorage");
-          }
-          $(this).click(function(e) {
-              localStorage["posStorage"] = $(window).scrollTop();
-          });
-
-          return true;
-      }
-
-      return false;
-  }
-  
-  /* ================================================== */
-
-  $(document).ready(function() {
-      // Feel free to set it for any element who trigger the reload
-      $('select').scrollPosReaload();
-  });
-
-}(jQuery));  
-
- $("inputbtn").on('click', function(event) {
-  $( document ).ready(function() {
-    // Add smooth scrolling to all links
- 
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-
-  
-  
+$(window).scroll(function() {
+  sessionStorage.scrollTop = $(this).scrollTop();
 });
+
+$(document).ready(function() {
+  if (sessionStorage.scrollTop != "undefined") {
+    $(window).scrollTop(sessionStorage.scrollTop);
+  }
+});
+ });;
