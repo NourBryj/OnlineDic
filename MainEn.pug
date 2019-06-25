@@ -1,0 +1,71 @@
+doctype html
+html(lang='en')
+	head
+		title Online Dictionary
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+		link(rel='stylesheet', href='css/bootstrap.min.css')
+		link(rel='stylesheet', href='css/siteStyle1.css')
+		link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
+		script(src='scripts/Menu.js')
+		script(src='scripts/jqScript.js')
+		script(src='scripts/formatScript.js')
+		style.
+	head
+	body
+		.jumbotron.text-center.jombtext
+			img(src="images/logo.jpg", alt="Online Dictionary Logo" style="width:50%; display: block; margin: 0 auto;" class="center")
+		.container-fluid.contStyle
+			.row
+				.col-xs-12(style='background-color:#076177;')
+					nav.navbar.navstyle
+						ul
+							li
+								a.active(href='HomeEn' tabindex='2' aria-label="Main Online dictionay Page") Online Dictionary
+
+							
+		#bodincrease.container.contmax
+			.row.toprow
+				.col-md-12
+					.btn-group.btn-group-lg.langbtncont
+						a.button.btn.btnstyle.rusbtn(type='button', tabindex='6'  href='/Russian') Russian
+						a.button.btn.btnstyle.enbtn(type='button', tabindex='7' href='/English' style='background-color:#66110d; color:white; text-decoration: underline;') English
+				.col-md-12
+					form.searchform(action='searchEn', method='POST')
+						input#nospace.submittext(type='text', name='oxford', placeholder='Enter Word', tabindex='8' aria-label="Write word to submit")  
+						input#inputbtn.btn.btn-lg.searchbutton(type='submit', tabindex='9' aria-label="Submit Word" )
+			.row.dicrow
+				#Oxbod.col-sm-12.col-md-12.col-lg-4.vcolspace
+					.colstyle.clearfix
+						div.titlespace
+							#dic.h3.pull-left(tabindex='10') Oxford Dictionary
+							button.btn.btn-sm.copybtn.pull-left(onclick="copyToClipboard('#oxcol')", tabindex='11' class="fas fa-copy" style='font-size: 18px;' aria-label="Copy Oxford Dictionary Text") 
+							button.btn.btn-sm.copybtn.pull-left(onclick="increaseFontSize('oxcol',5)", tabindex='12' aria-label="Increase text size" class="fas fa-plus" style='font-size: 18px;')
+							button.btn.btn-sm.copybtn.pull-left(onclick="increaseFontSize('oxcol',-5))", tabindex='13' aria-label="Decrease text size" class="fas fa-minus" style='font-size: 18px;')
+						.h4 #{oxtitle}
+						#oxcol.p !{oxtxt}
+				#Yanbod.col-sm-12.col-md-12.col-lg-4.vcolspace
+					.colstyle.clearfix
+						div.titlespace
+							h3.pull-left(tabindex='12') Yandex Dictionary
+							button.btn.btn-sm.copybtn.pull-left(onclick="copyToClipboard('#yancol')", tabindex='14' aria-label="Copy Yandex Dictionary Text" class="fas fa-copy" style='font-size: 18px;')
+							button.btn.btn-sm.copybtn.pull-left(onclick="increaseFontSize('yancol',5)", tabindex='15' aria-label="Increase text size" class="fas fa-plus" style='font-size: 18px;')
+							button.btn.btn-sm.copybtn.pull-left(onclick="increaseFontSize('yancol',-5)", tabindex='16' aria-label="Decrease text size" class="fas fa-minus" style='font-size: 18px;')
+						.h4 #{yandextitle}						
+						#yancol.p !{yantxt}
+				#Lexbod.col-sm-12.col-md-12.col-lg-4.vcolspace
+					.colstyle.clearfix
+						div.titlespace
+							h3.pull-left(tabindex='14') Lexicala Dictionary
+							button.btn.btn-sm.copybtn.pull-left(onclick="copyToClipboard('#lexcol')", tabindex='17' aria-label="Copy Lexicala Dictionary Text" class="fas fa-copy" style='font-size: 18px;')
+							button.btn.btn-sm.copybtn.pull-left(onclick="increaseFontSize('lexcol',5)", tabindex='18' aria-label="Increase text size" class="fas fa-plus" style='font-size: 18px;')
+							button.btn.btn-sm.copybtn.pull-left(onclick="increaseFontSize('lexcol',-5)", tabindex='19' aria-label="Decrease text size" class="fas fa-minus" style='font-size: 18px;')
+							
+						p.titlespace
+							.h4 #{lextitle}
+						#lexcol.p !{lextxt}
+		footer.text-center.footer(tabindex='20')
+			p.copyrights All Rights Reserved 2019
+			p.POWERED BY: OXFORD DICTIONARY, YANDEX DICTIONARY, LEXICALA DICTIONARY.

@@ -21,17 +21,7 @@ app.get('/Russian', function (req, res) {
 app.get('/English', function (req, res) {
     res.render('MainEn');
 });
-app.get('/AboutEn', function (req, res) {
-    res.render('AboutEn');
-app.get('/AboutRus', function (req, res) {
-    res.render('AboutRus');   
-});
-app.get('/HomeEN', function (req, res) {
-    res.render('MainEn');
-});
-app.get('/HomeRus', function (req, res) {
-    res.render('MainRus');
-});
+
 
 
 //The search function on the english version of the website
