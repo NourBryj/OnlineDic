@@ -40,6 +40,7 @@ app.post('/searchEn', function (searchReq, searchRes) {
         async.parallel({
             one: function (cb) {
                 https.get('https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=dict.1.1.20190225T103213Z.42e83f4c43a8ba84.b6336f95c95674b2e33b937c87a52688db0158d6 &lang=en-en&text=' + searchInputVal, (resp) => {
+                    
                     let data = '';
                     // A chunk of data has been recieved.
                     resp.on('data', (chunk) => {
@@ -57,27 +58,21 @@ app.post('/searchEn', function (searchReq, searchRes) {
                 });
             },
 			
-			
-			
             two: function (cb) {
-				//Calling header
                 const lexoptions = {
-                    host: 'api.lexicala.com',
-                    path: '/api/search?source=global&language=en&text='+searchInputVal+'&page=1&page-length=10',
+                    host: 'dictapi.lexicala.com',
+                    path: '/search?source=global&language=en&text='+searchInputVal,
                     method: 'GET',
                     headers: {
                         Authorization: 'Basic ' + new Buffer('N_Bryj' + ':' + 'Nourhaha1998').toString('base64'),
                     }
                 };
-
                 https.request(lexoptions, function (res) {
-					// A chunk of data has been recieved.
                     var body = '';
                     res.setEncoding('utf8');
                     res.on('data', function (chunk) {
                         body += chunk;
                     });
-					// The whole response has been received. Print out the result.
                     res.on('end', function () {
                         var result = JSON.parse(body);
                         cb(null, result);
@@ -89,12 +84,11 @@ app.post('/searchEn', function (searchReq, searchRes) {
             },
 			
 			
-			
             three: function (cb) {
 				//Calling header
                 var postRequest = {
                     host: "od-api.oxforddictionaries.com",
-                    path: "/api/v1/entries/en/" + searchInputVal,
+                    path: "/api/v2/entries/en-gb/" + searchInputVal,
                     method: "GET",
                     'content-type': 'application/json',
                     headers: {
@@ -134,7 +128,7 @@ app.post('/searchEn', function (searchReq, searchRes) {
 			//Validate Result
             var yantr = JSON.stringify(resu.one);
             if (yantr.includes('"def":[]') | yantr.includes("Invalid parameter")) {
-                yantr = " No word Available";
+                yantr = "No word Available";
             } else {
 				//If Valid, begin formatting
 				var yanres = resu.one;
@@ -167,10 +161,11 @@ app.post('/searchEn', function (searchReq, searchRes) {
                 }
 
 
+            
             }
 			//Validate Result
 			var oxstr = JSON.stringify(resu.three);
-            if (oxstr.includes("404 Not Found") | oxstr == undefined) {
+            if (oxstr.includes("No entry found matching supplied source_lang, word and provided filters")) {
                 var oxstring = "No word Available"
             } else {
 				//If Valid, begin formatting
@@ -213,9 +208,9 @@ app.post('/searchEn', function (searchReq, searchRes) {
                 }
 				//Validate Result
                 var lexres = JSON.stringify(resu.two);
-                if (resu.two.n_results = 0) {
+                if (resu.two.n_results = 0 | !lexres.includes("senses") ) {
 
-                    lexres = "Word not Available";
+             lexres = "Word not Available";
 
                 } else {
 					//If Valid, begin formatting
@@ -232,6 +227,7 @@ app.post('/searchEn', function (searchReq, searchRes) {
 
                 }
             }
+            searchRes.set({ 'content-type': 'text/html; charset=utf-8' });
             searchRes.render("MainEn", {
                 yandextitle: searchInputVal,
                 oxtitle: searchInputVal,
@@ -275,8 +271,8 @@ app.post('/searchRus', function (searchReq, searchRes) {
             },
             two: function (cb) {
                 const lexoptions = {
-                    host: 'api.lexicala.com',
-                    path: '/api/search?source=global&language=ru&text='+searchInputVal+'&page=1&page-length=10',
+                    host: 'dictapi.lexicala.com',
+                    path: '/search?source=global&language=ru&text='+searchInputVal,
                     method: 'GET',
                     headers: {
                         Authorization: 'Basic ' + new Buffer('N_Bryj' + ':' + 'Nourhaha1998').toString('base64'),
@@ -338,7 +334,11 @@ app.post('/searchRus', function (searchReq, searchRes) {
             }
            
             var lexres = JSON.stringify(resu.two);
-            if (resu.two.n_results = 0) {
+
+            if (resu.two.n_results = 0 | !lexres.includes("senses")) {
+
+          
+
 
                 lexres = "Word not Available";
 
@@ -364,9 +364,7 @@ app.post('/searchRus', function (searchReq, searchRes) {
             console.log("Lexicala: ");
             console.log(resu.two);
             searchRes.render("MainRus", {
-                yandextitle: searchInputVal,
-                oxtitle: searchInputVal,
-                lextitle: searchInputVal,
+               
                 yantxt: yanstring,
                 lextxt: lexres,
         

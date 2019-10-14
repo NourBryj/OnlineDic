@@ -1,6 +1,3 @@
-
-
-
 // We need this function if text is pasted arbitrarily.
   $(document).ready(function(e) {   
 $.fn.getCursorPosition = function() {
@@ -57,5 +54,4 @@ $(document).ready(function() {
   if (sessionStorage.scrollTop != "undefined") {
     $(window).scrollTop(sessionStorage.scrollTop);
   }
-});
- });;
+});});

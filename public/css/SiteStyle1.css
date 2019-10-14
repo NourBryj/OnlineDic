@@ -1,4 +1,5 @@
 
+
 body{
 font-family:'Century Gothic';
 }
@@ -123,8 +124,7 @@ font-family:'Century Gothic';
   background-color:#a3221b;
   -webkit-transition: background-color 0.3s linear;
 		-ms-transition: background-color 0.3s linear;
-    transition: background-color 0.3s linear;
-    
+    transition: background-color 0.3s linear;  
 }
 .searchbutton:hover{
 	background-color:#66110d;
